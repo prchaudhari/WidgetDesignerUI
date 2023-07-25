@@ -1,0 +1,2 @@
+E:\QuikSyncProjects\Widget\WidgetDesignerUI\WidgetDesignerUI\obj\Debug\WidgetDesignerUI.esproj.SuggestedBindingRedirects.cache
+E:\QuikSyncProjects\Widget\WidgetDesignerUI\WidgetDesignerUI\obj\Debug\WidgetDesignerUI.esproj.CoreCompileInputs.cache
