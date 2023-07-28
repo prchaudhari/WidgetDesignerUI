@@ -1,57 +1,61 @@
 <div class="container">
-  <h1>Add new widget</h1>
-  <div class="row">
-    <div class="col-8">
-      <form #form="ngForm" (ngSubmit)="addWidget()">
+  <h2>Widget Designer</h2>
+  <div>
+    <div class="row">
+      <div class="col-8">
+        <form #form="ngForm" (ngSubmit)="addWidget()">
 
-        <div class="form-group row required mb-3">
-          <label class="col-md-3 col-form-label" for="widgetName">
-            Widget Name
-          </label>
-          <div class="col-md-9">
-            <input type="text" class="form-control" id="widgetName" name="widgetName" [(ngModel)]="newWidget.widgetName" />
+          <div class="form-group row required mb-3">
+            <label class="col-md-3 col-form-label" for="widgetName">
+              Widget Name:
+            </label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="widgetName" name="widgetName" [(ngModel)]="newWidget.widgetName" />
+            </div>
           </div>
-        </div>
 
-        <div class="form-group row required mb-3">
-          <label class="col-md-3 col-form-label" for="description">
-            Description
-          </label>
-          <div class="col-md-9">
-            <textarea placeholder="Enter description" type="text" class="form-control" name="description"
-                      id="description"
-                      [(ngModel)]="newWidget.description">
+          <div class="form-group row required mb-3">
+            <label class="col-md-3 col-form-label" for="description">
+              Description:
+            </label>
+            <div class="col-md-9">
+              <textarea placeholder="Enter description" type="text" class="form-control" name="description"
+                        id="description"
+                        [(ngModel)]="newWidget.description">
                  </textarea>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group row required mb-3">
-          <label class="col-md-3 col-form-label" for="dataSourceJson">
-            Data Source Json
-          </label>
-          <div class="col-md-9">
-            <input type="text" class="form-control" id="dataSourceJson" name="dataSourceJson" [(ngModel)]="newWidget.dataSourceJson" />
+          <div class="form-group row required mb-3">
+            <label class="col-md-3 col-form-label" for="dataSourceJson">
+              Data Source Json:
+            </label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="dataSourceJson" name="dataSourceJson" [(ngModel)]="newWidget.dataSourceJson" />
+            </div>
           </div>
-        </div>
 
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="initialWidth">
-            Initial Width
-          </label>
-          <div class="col-md-4">
-            <input type="text" class="form-control" id="initialWidth" name="initialWidth" [(ngModel)]="newWidget.initialWidth" />
+          <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="initialWidth">
+              Initial Width:
+            </label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" id="initialWidth" name="initialWidth" [(ngModel)]="newWidget.initialWidth" />
+            </div>
+            <label class="col-md-2 col-form-label" for="initialHeight">
+              Initial Height:
+            </label>
+            <div class="col-md-3">
+              <input type="text" class="form-control" id="initialHeight" name="initialHeight" [(ngModel)]="newWidget.initialHeight" />
+            </div>
           </div>
-          <label class="col-md-2 col-form-label" for="initialHeight">
-            Initial Height
-          </label>
-          <div class="col-md-3">
-            <input type="text" class="form-control" id="initialHeight" name="initialHeight" [(ngModel)]="newWidget.initialHeight" />
+          <div>
+            <button type="button" (click)="ShowPreview()" class="btn btn-primary">Preview</button>&nbsp;&nbsp;
+            <button type="submit" class="btn btn-primary">Save</button>
           </div>
-        </div>
-
-
-        <button type="submit" class="btn btn-primary">Save</button>
-      </form>
+        </form>
+      </div>
     </div>
+    <div style="background-color:gainsboro;width:50%" >Preview Div</div>
   </div>
 </div>

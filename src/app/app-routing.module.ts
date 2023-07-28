@@ -9,7 +9,7 @@ import { AddWidgetComponent } from './components/add-widget/add-widget.component
 const routes: Routes = [
   {
     path: '',
-    component: ProductsComponent
+    component: WidgetComponent
   },
   {
     path: 'products',
