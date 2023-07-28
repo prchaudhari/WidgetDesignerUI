@@ -18,7 +18,10 @@
             Description
           </label>
           <div class="col-md-9">
-            <input type="text" class="form-control" id="description" name="description" [(ngModel)]="newWidget.description" />
+            <textarea placeholder="Enter description" type="text" class="form-control" name="description"
+                      id="description"
+                      [(ngModel)]="newWidget.description">
+                 </textarea>
           </div>
         </div>
 
