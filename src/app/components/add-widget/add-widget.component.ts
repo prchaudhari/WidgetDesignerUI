@@ -11,10 +11,11 @@ import { WidgetsService } from '../../services/widget.service';
 export class AddWidgetComponent {
   newWidget: Widget = {
     id: '',
-    name: '',
-    type: '',
-    color: '',
-    price: 0,
+    widgetName: '',
+    description: '',
+    dataSourceJson: '',
+    initialWidth: 0,
+    initialHeight: 0,
   };
 
   constructor(

@@ -1,7 +1,8 @@
 export interface Widget {
   id: string,
-  name: string,
-  type: string,
-  color: string,
-  price: number
+  widgetName: string,
+  description: string,
+  dataSourceJson: string,
+  initialWidth: number
+  initialHeight: number
 }
