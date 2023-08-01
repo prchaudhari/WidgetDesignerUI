@@ -3,6 +3,7 @@ export interface Widget {
   widgetName: string,
   description: string,
   dataSourceJson: string,
+  WidgetHtml:string,
   widgetCSS: string;
   widgetCSSUrl: string;
   widgetIcon: string;

@@ -16,7 +16,7 @@ export class WidgetsService {
   }
 
   addWidget(newWidget: Widget): Observable<Widget> {
-    newWidget.id = '00000000-0000-0000-0000-000000000000';
+    //newWidget.id = '00000000-0000-0000-0000-000000000000';
     return this.http.post<Widget>(this.baseApiUrl + '/api/widgets', newWidget);
   }
 
