@@ -4,9 +4,15 @@
   </div>
   <div class="rounded-3" style=" width: 100%; border: 1px solid black; padding-top: 8px; padding-left: 5px; padding-right: 5px;
       background-color: #f0f2f1; ">
-      <div class="container">
-        <button type="button" (click)="ShowPreview()" class="btn btn-primary">Preview</button>&nbsp;&nbsp;
-      </div>
+    <div class="container">
+      <!--<button type="button" (click)="ShowPreview()" class="btn btn-primary">Preview</button>&nbsp;&nbsp;-->
+      <button type="button"
+              class="btn btn-primary"
+              (click)="mapping(WidgetHtml.value,dataSourceJson.value,widgetCSS.value)">
+        Preview
+      </button>
+      <div [innerHtml]="htmltextvalue"></div>
+    </div>
   </div>
   <div class="rounded-3" style="width: 100%; border: 1px solid black; padding-top: 8px; padding-left: 5px; padding-right: 5px; background-color: #f0f2f1 ">
     <div class="row">
@@ -39,7 +45,7 @@
               Data Source Json:
             </label>
             <div class="col-md-9">
-              <textarea type="text" class="form-control" id="dataSourceJson" name="dataSourceJson"
+              <textarea type="text" class="form-control" id="dataSourceJson" name="dataSourceJson" #dataSourceJson
                         [(ngModel)]="newWidget.dataSourceJson">
               </textarea>
             </div>
@@ -50,15 +56,7 @@
               Text Editor:
             </label>
             <div class="col-md-9">
-              <ckeditor [(ngModel)]="ckeditorContent">
-                <!--<ckbutton [name]="'saveButton'"
-                          [command]="'saveCmd'"
-                          (click)="save($event)"
-                          [icon]="'save.png'"
-                          [label]="'Save Document'"
-                          [toolbar]="'clipboard,1'">
-                </ckbutton>-->
-              </ckeditor>
+              <ckeditor #WidgetHtml id="WidgetHtml" name="WidgetHtml" [(ngModel)]="newWidget.WidgetHtml"/>
             </div>
           </div>
 
@@ -67,7 +65,7 @@
               Widget CSS:
             </label>
             <div class="col-md-9">
-              <textarea type="text" class="form-control" id="widgetCSS" name="widgetCSS"
+              <textarea type="text" class="form-control" id="widgetCSS" name="widgetCSS" #widgetCSS
                         [(ngModel)]="newWidget.widgetCSS">
               </textarea>
             </div>
@@ -88,12 +86,12 @@
             </div>
           </div>
           <div>
-            <button type="button" (click)="ShowPreview()" class="btn btn-primary">Preview</button>&nbsp;&nbsp;
+            
             <button type="submit" class="btn btn-primary">Save</button>
           </div>
         </form>
       </div>
     </div>
-    <div style="background-color:gainsboro;width:50%">Preview Div</div>
+  
   </div>
 </div>
