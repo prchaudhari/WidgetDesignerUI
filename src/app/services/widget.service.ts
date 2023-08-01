@@ -12,12 +12,13 @@ export class WidgetService {
   constructor(private http: HttpClient) { }
 
   getAllWidget(): Observable<Widget[]> {
-    return this.http.get<Widget[]>(this.baseApiUrl + '/api/widget');
+    return this.http.get<Widget[]>(this.baseApiUrl + '/api/widgets');
   }
 
   addWidget(newWidget: Widget): Observable<Widget> {
     //newWidget.id = '00000000-0000-0000-0000-000000000000';
-    return this.http.post<Widget>(this.baseApiUrl + '/api/widget', newWidget);
+    alert("Hi");
+    return this.http.post<Widget>(this.baseApiUrl + '/api/widgets', newWidget);
   }
 
   getWidget(id: number): Observable<Widget> {
