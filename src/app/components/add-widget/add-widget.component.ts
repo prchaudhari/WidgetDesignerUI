@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Widget } from '../../models/widget.model';
-import { WidgetsService } from '../../services/widget.service';
+import { WidgetService } from '../../services/widget.service';
 
 @Component({
   selector: 'app-add-widget',
@@ -23,7 +23,7 @@ export class AddWidgetComponent {
   };
 
   constructor(
-    private widgetService: WidgetsService,
+    private widgetService: WidgetService,
     private router: Router
   ) { }
 
