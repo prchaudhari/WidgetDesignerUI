@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\add-widget",
+    "\\src\\app\\components\\widget"
   ],
-  "SelectedNode": "\\WidgetDesignerUI.sln",
+  "SelectedNode": "\\src\\app\\components\\widget\\widget.component.html",
   "PreviewInSolutionExplorer": false
 }

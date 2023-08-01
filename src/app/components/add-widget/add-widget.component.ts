@@ -9,11 +9,15 @@ import { WidgetsService } from '../../services/widget.service';
   styleUrls: ['./add-widget.component.css']
 })
 export class AddWidgetComponent {
+  ckeditorContent: any;
   newWidget: Widget = {
     id: '',
     widgetName: '',
     description: '',
     dataSourceJson: '',
+    widgetCSS: '',
+    widgetCSSUrl: '',
+    widgetIcon: '',
     initialWidth: 0,
     initialHeight: 0,
   };

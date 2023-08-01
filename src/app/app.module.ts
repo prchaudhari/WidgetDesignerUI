@@ -10,6 +10,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { WidgetComponent } from './components/widget/widget.component';
 import { AddWidgetComponent } from './components/add-widget/add-widget.component';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AddWidgetComponent } from './components/add-widget/add-widget.component
     AddWidgetComponent
   ],
   imports: [
+    CKEditorModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

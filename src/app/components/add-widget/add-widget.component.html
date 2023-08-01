@@ -1,5 +1,12 @@
 <div class="container">
-  <h2>Widget Designer</h2>
+  <div>
+    <h2>Widget Designer</h2>
+  </div>
+  <div style="float:right;margin-top:-30px">
+      <div class="container">
+        <button type="button" (click)="ShowPreview()" class="btn btn-primary">Preview</button>&nbsp;&nbsp;
+      </div>
+  </div>
   <div>
     <div class="row">
       <div class="col-8">
@@ -31,7 +38,37 @@
               Data Source Json:
             </label>
             <div class="col-md-9">
-              <input type="text" class="form-control" id="dataSourceJson" name="dataSourceJson" [(ngModel)]="newWidget.dataSourceJson" />
+              <textarea type="text" class="form-control" id="dataSourceJson" name="dataSourceJson"
+                        [(ngModel)]="newWidget.dataSourceJson">
+              </textarea>
+            </div>
+          </div>
+
+          <div class="form-group row required mb-3">
+            <label class="col-md-3 col-form-label" for="">
+              Text Editor:
+            </label>
+            <div class="col-md-9">
+              <ckeditor [(ngModel)]="ckeditorContent">
+                <!--<ckbutton [name]="'saveButton'"
+                          [command]="'saveCmd'"
+                          (click)="save($event)"
+                          [icon]="'save.png'"
+                          [label]="'Save Document'"
+                          [toolbar]="'clipboard,1'">
+                </ckbutton>-->
+              </ckeditor>
+            </div>
+          </div>
+
+          <div class="form-group row required mb-3">
+            <label class="col-md-3 col-form-label" for="widgetCSS">
+              Widget CSS:
+            </label>
+            <div class="col-md-9">
+              <textarea type="text" class="form-control" id="widgetCSS" name="widgetCSS"
+                        [(ngModel)]="newWidget.widgetCSS">
+              </textarea>
             </div>
           </div>
 
@@ -56,6 +93,6 @@
         </form>
       </div>
     </div>
-    <div style="background-color:gainsboro;width:50%" >Preview Div</div>
+    <div style="background-color:gainsboro;width:50%">Preview Div</div>
   </div>
 </div>
