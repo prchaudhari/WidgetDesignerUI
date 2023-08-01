@@ -1,15 +1,16 @@
 <div class="container">
   <div>
-    <h2>Widget Designer</h2>
+    <h2 style="text-align:center">Widget Designer</h2>
   </div>
-  <div style="float:right;margin-top:-30px">
+  <div class="rounded-3" style=" width: 100%; border: 1px solid black; padding-top: 8px; padding-left: 5px; padding-right: 5px;
+      background-color: #f0f2f1; ">
       <div class="container">
         <button type="button" (click)="ShowPreview()" class="btn btn-primary">Preview</button>&nbsp;&nbsp;
       </div>
   </div>
-  <div>
+  <div class="rounded-3" style="width: 100%; border: 1px solid black; padding-top: 8px; padding-left: 5px; padding-right: 5px; background-color: #f0f2f1 ">
     <div class="row">
-      <div class="col-8">
+      <div class="col-10">
         <form #form="ngForm" (ngSubmit)="addWidget()">
 
           <div class="form-group row required mb-3">
