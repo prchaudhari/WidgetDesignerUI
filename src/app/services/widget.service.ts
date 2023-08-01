@@ -6,18 +6,18 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class WidgetsService {
+export class WidgetService {
   baseApiUrl: string = "https://localhost:44381";
 
   constructor(private http: HttpClient) { }
 
-  getAllWidgets(): Observable<Widget[]> {
-    return this.http.get<Widget[]>(this.baseApiUrl + '/api/widgets');
+  getAllWidget(): Observable<Widget[]> {
+    return this.http.get<Widget[]>(this.baseApiUrl + '/api/widget');
   }
 
   addWidget(newWidget: Widget): Observable<Widget> {
-    //newWidget.id = '00000000-0000-0000-0000-000000000000';
-    return this.http.post<Widget>(this.baseApiUrl + '/api/widgets', newWidget);
+    newWidget.id = '00000000-0000-0000-0000-000000000000';
+    return this.http.post<Widget>(this.baseApiUrl + '/api/widget', newWidget);
   }
 
   getWidget(id: number): Observable<Widget> {
