@@ -14,7 +14,7 @@ export class AddWidgetComponent {
 
   htmltextvalue: string = "";
   newWidget: Widget = {
-    id: '',
+    id: 0,
     widgetName: '',
     description: '',
     dataSourceJson: '',
@@ -22,8 +22,8 @@ export class AddWidgetComponent {
     widgetCSS: '',
     widgetCSSUrl: '',
     widgetIcon: '',
-    initialWidth: 0,
-    initialHeight: 0,
+    width: 0,
+    height: 0,
   };
 
   constructor(

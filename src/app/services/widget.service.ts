@@ -20,15 +20,15 @@ export class WidgetsService {
     return this.http.post<Widget>(this.baseApiUrl + '/api/widgets', newWidget);
   }
 
-  getWidget(id: string): Observable<Widget> {
+  getWidget(id: number): Observable<Widget> {
     return this.http.get<Widget>(this.baseApiUrl + '/api/widgets/' + id);
   }
 
-  updateWidget(id: string, updateWidgetRequest: Widget): Observable<Widget> {
+  updateWidget(id: number, updateWidgetRequest: Widget): Observable<Widget> {
     return this.http.put<Widget>(this.baseApiUrl + '/api/widgets/' + id, updateWidgetRequest);
   }
 
-  deleteWidget(id: string): Observable<Widget> {
+  deleteWidget(id: number): Observable<Widget> {
     return this.http.delete<Widget>(this.baseApiUrl + '/api/widgets/' + id);
   }
 
